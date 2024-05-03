@@ -332,7 +332,7 @@ end)();
 -- Function "LocalScript"
 (function()
 	local script = Instance.new("LocalScript", Instances.Execute_2)
-	Instances.Execute.MouseButton1Click:Connect(function()
+	Instances["Execute_2"].MouseButton1Click:Connect(function()
 		--Execute stuff here
 		
 	end)
