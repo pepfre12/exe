@@ -1,7 +1,13 @@
---important shit at 329 and 312--
+--[[
+
+		Gui2Lua™
+		10zOfficial
+		Version 1.0.0
+
+]]
 
 
-
+-- Instances
 
 local HAXEXEV4 = Instance.new("ScreenGui")
 local Executer = Instance.new("Frame")
@@ -24,7 +30,7 @@ local SCRIPT = Instance.new("ImageButton")
 local RE = Instance.new("ImageButton")
 local RIG = Instance.new("ImageButton")
 local Buttons = Instance.new("Frame")
-local Execute_2 = Instance.new("TextButton")
+local Title = Instance.new("TextButton")
 local UICorner_5 = Instance.new("UICorner")
 local Holder = Instance.new("Frame")
 local Background_2 = Instance.new("Frame")
@@ -248,24 +254,24 @@ Buttons.BorderSizePixel = 0
 Buttons.Position = UDim2.new(0, 10, 0, 5)
 Buttons.Size = UDim2.new(0.25, -20, 0, 25)
 
-Execute_2.Name = "Execute"
-Execute_2.Parent = Buttons
-Execute_2.Active = false
-Execute_2.BackgroundColor3 = Color3.new(0, 0, 0)
-Execute_2.BackgroundTransparency = 1
-Execute_2.BorderColor3 = Color3.new(0, 0, 0)
-Execute_2.BorderSizePixel = 0
-Execute_2.Position = UDim2.new(0.227027029, 0, 0.0799999982, 0)
-Execute_2.Size = UDim2.new(0.529729724, 0, 0, 28)
-Execute_2.Font = Enum.Font.SourceSans
-Execute_2.Text = "H A X . E X E"
-Execute_2.TextColor3 = Color3.new(1, 1, 1)
-Execute_2.TextSize = 20
-Execute_2.TextStrokeColor3 = Color3.new(1, 1, 1)
-Execute_2.TextStrokeTransparency = 0.8999999761581421
-Execute_2.TextTransparency = 0.5
+Title.Name = "Title"
+Title.Parent = Buttons
+Title.Active = false
+Title.BackgroundColor3 = Color3.new(0, 0, 0)
+Title.BackgroundTransparency = 1
+Title.BorderColor3 = Color3.new(0, 0, 0)
+Title.BorderSizePixel = 0
+Title.Position = UDim2.new(0.227027029, 0, 0.0799999982, 0)
+Title.Size = UDim2.new(0.529729724, 0, 0, 28)
+Title.Font = Enum.Font.SourceSans
+Title.Text = "H A X . E X E"
+Title.TextColor3 = Color3.new(1, 1, 1)
+Title.TextSize = 20
+Title.TextStrokeColor3 = Color3.new(1, 1, 1)
+Title.TextStrokeTransparency = 0.8999999761581421
+Title.TextTransparency = 0.5
 
-UICorner_5.Parent = Execute_2
+UICorner_5.Parent = Title
 UICorner_5.CornerRadius = UDim.new(0, 5)
 
 Holder.Name = "Holder"
@@ -309,24 +315,25 @@ TextBox.TextYAlignment = Enum.TextYAlignment.Top
 
 -- Scripts
 
-local function OKMN_fake_script() -- Inject.LocalScript 
+local function WBZIOVJ_fake_script() -- Inject.LocalScript 
 	local script = Instance.new('LocalScript', Inject)
 
 	Inject.MouseButton1Click:Connect(function()
+		
 		--Inject stuff here
 		
 	end)
 end
-coroutine.wrap(OKMN_fake_script)()
-local function XDMTKW_fake_script() -- Clear.LocalScript 
+coroutine.wrap(WBZIOVJ_fake_script)()
+local function KLKOGTU_fake_script() -- Clear.LocalScript 
 	local script = Instance.new('LocalScript', Clear)
 
 	Clear.MouseButton1Click:Connect(function()
 		TextBox.Text = ""
 	end)
 end
-coroutine.wrap(XDMTKW_fake_script)()
-local function YPPWA_fake_script() -- Execute.LocalScript 
+coroutine.wrap(KLKOGTU_fake_script)()
+local function YMCA_fake_script() -- Execute.LocalScript 
 	local script = Instance.new('LocalScript', Execute)
 
 	Execute.MouseButton1Click:Connect(function()
@@ -334,16 +341,16 @@ local function YPPWA_fake_script() -- Execute.LocalScript
 		
 	end)
 end
-coroutine.wrap(YPPWA_fake_script)()
-local function LTMPE_fake_script() -- RJ.LocalScript 
+coroutine.wrap(YMCA_fake_script)()
+local function HTBI_fake_script() -- RJ.LocalScript 
 	local script = Instance.new('LocalScript', RJ)
 
 	RJ.MouseButton1Click:Connect(function()
 		game:GetService("TeleportService"):Teleport(game.PlaceId, game:GetService("Players").LocalPlayer)
 	end)
 end
-coroutine.wrap(LTMPE_fake_script)()
-local function YAUS_fake_script() -- RS.LocalScript 
+coroutine.wrap(HTBI_fake_script)()
+local function CZQN_fake_script() -- RS.LocalScript 
 	local script = Instance.new('LocalScript', RS)
 
 	RS.MouseButton1Click:Connect(function()
@@ -351,17 +358,19 @@ local function YAUS_fake_script() -- RS.LocalScript
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/pepfre12/exe/hax"))()
 	end)
 end
-coroutine.wrap(YAUS_fake_script)()
-local function XWNOQGC_fake_script() -- RE.LocalScript 
+coroutine.wrap(CZQN_fake_script)()
+local function AVCNDBB_fake_script() -- RE.LocalScript 
 	local script = Instance.new('LocalScript', RE)
 
 	RE.MouseButton1Click:Connect(function()
-		game.Players.LocalPlayer.Character.Humanoid.Health = 0
+		
+		game.Players.LocalPlayer.Character.Humanoid:TakeDamage(100000)
+		
 	end)
 end
-coroutine.wrap(XWNOQGC_fake_script)()
-local function NXFS_fake_script() -- HAXEXEV4.Dragify 
-	local script = Instance.new('LocalScript', HAXEXEV4)
+coroutine.wrap(AVCNDBB_fake_script)()
+local function GBVG_fake_script() -- Executer.Dragify 
+	local script = Instance.new('LocalScript', Executer)
 
 	local UIS = game:GetService("UserInputService")
 	function dragify(Frame)
@@ -401,4 +410,4 @@ local function NXFS_fake_script() -- HAXEXEV4.Dragify
 	
 	dragify(script.Parent)
 end
-coroutine.wrap(NXFS_fake_script)()
+coroutine.wrap(GBVG_fake_script)()
