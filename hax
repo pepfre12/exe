@@ -42,6 +42,7 @@ local TextBox = Instance.new("TextBox")
 HAXEXEV4.Name = "HAXEXEV4"
 HAXEXEV4.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 HAXEXEV4.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+HAXEXEV4.ResetOnSpawn = false
 
 Executer.Name = "Executer"
 Executer.Parent = HAXEXEV4
