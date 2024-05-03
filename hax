@@ -314,56 +314,56 @@ Instances.TextBox.ClearTextOnFocus = false
 -- Function "LocalScript"
 (function()
 	local script = Instance.new("LocalScript", Instances.Inject)
-	Inject.MouseButton1Click:Connect(function()
+	Instances.Inject.MouseButton1Click:Connect(function()
 		
 		--Inject stuff here
 		
 	end)
-end)()
+end)();
 
 -- Function "LocalScript"
 (function()
 	local script = Instance.new("LocalScript", Instances.Clear)
-	Clear.MouseButton1Click:Connect(function()
-		TextBox.Text = ""
+	Instances.Clear.MouseButton1Click:Connect(function()
+		Instances.TextBox.Text = ""
 	end)
-end)()
+end)();
 
 -- Function "LocalScript"
 (function()
 	local script = Instance.new("LocalScript", Instances.Execute_2)
-	Execute.MouseButton1Click:Connect(function()
+	Instances.Execute.MouseButton1Click:Connect(function()
 		--Execute stuff here
 		
 	end)
-end)()
+end)();
 
 -- Function "LocalScript"
 (function()
 	local script = Instance.new("LocalScript", Instances.RJ)
-	RJ.MouseButton1Click:Connect(function()
+	Instances.RJ.MouseButton1Click:Connect(function()
 		game:GetService("TeleportService"):Teleport(game.PlaceId, game:GetService("Players").LocalPlayer)
 	end)
-end)()
+end)();
 
 -- Function "LocalScript"
 (function()
 	local script = Instance.new("LocalScript", Instances.RS)
-	RS.MouseButton1Click:Connect(function()
-		HAXEXEV4:Destroy()
+	Instances.RS.MouseButton1Click:Connect(function()
+		Instances.HAXEXEV4:Destroy()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/pepfre12/exe/hax"))()
 	end)
-end)()
+end)();
 
 -- Function "LocalScript"
 (function()
 	local script = Instance.new("LocalScript", Instances.RE)
-	RE.MouseButton1Click:Connect(function()
+	Instances.RE.MouseButton1Click:Connect(function()
 		
 		game.Players.LocalPlayer.Character.Humanoid:TakeDamage(100000)
 		
 	end)
-end)()
+end)();
 
 -- Function "Dragify"
 (function()
