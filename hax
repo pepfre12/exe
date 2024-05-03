@@ -29,6 +29,7 @@ local RS = Instance.new("ImageButton")
 local SCRIPT = Instance.new("ImageButton")
 local RE = Instance.new("ImageButton")
 local RIG = Instance.new("ImageButton")
+local RS_2 = Instance.new("ImageButton")
 local Buttons = Instance.new("Frame")
 local Title = Instance.new("TextButton")
 local UICorner_5 = Instance.new("UICorner")
@@ -42,6 +43,7 @@ local TextBox = Instance.new("TextBox")
 HAXEXEV4.Name = "HAXEXEV4"
 HAXEXEV4.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 HAXEXEV4.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+HAXEXEV4.ResetOnSpawn = false
 
 Executer.Name = "Executer"
 Executer.Parent = HAXEXEV4
@@ -245,6 +247,19 @@ RIG.Image = "rbxassetid://11295273292"
 RIG.ImageColor3 = Color3.new(0.784314, 0.784314, 0.784314)
 RIG.ImageTransparency = 0.20000000298023224
 
+RS_2.Name = "RS"
+RS_2.Parent = Sidebar
+RS_2.AnchorPoint = Vector2.new(0, 1)
+RS_2.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+RS_2.BackgroundTransparency = 1
+RS_2.BorderSizePixel = 0
+RS_2.Position = UDim2.new(0.56099999, 10, 1, -10)
+RS_2.Size = UDim2.new(0, 22, 0, 22)
+RS_2.ZIndex = 3
+RS_2.Image = "rbxassetid://10152135063"
+RS_2.ImageColor3 = Color3.new(0.784314, 0.784314, 0.784314)
+RS_2.ImageTransparency = 0.3199999928474426
+
 Buttons.Name = "Buttons"
 Buttons.Parent = Executer
 Buttons.BackgroundColor3 = Color3.new(1, 1, 1)
@@ -315,7 +330,7 @@ TextBox.TextYAlignment = Enum.TextYAlignment.Top
 
 -- Scripts
 
-local function ALEK_fake_script() -- Inject.LocalScript 
+local function PBXBJ_fake_script() -- Inject.LocalScript 
 	local script = Instance.new('LocalScript', Inject)
 
 	Inject.MouseButton1Click:Connect(function()
@@ -324,16 +339,16 @@ local function ALEK_fake_script() -- Inject.LocalScript
 		
 	end)
 end
-coroutine.wrap(ALEK_fake_script)()
-local function CGRNMDM_fake_script() -- Clear.LocalScript 
+coroutine.wrap(PBXBJ_fake_script)()
+local function LGDG_fake_script() -- Clear.LocalScript 
 	local script = Instance.new('LocalScript', Clear)
 
 	Clear.MouseButton1Click:Connect(function()
 		TextBox.Text = ""
 	end)
 end
-coroutine.wrap(CGRNMDM_fake_script)()
-local function AOXBCY_fake_script() -- Execute.LocalScript 
+coroutine.wrap(LGDG_fake_script)()
+local function AVDV_fake_script() -- Execute.LocalScript 
 	local script = Instance.new('LocalScript', Execute)
 
 	Execute.MouseButton1Click:Connect(function()
@@ -341,16 +356,16 @@ local function AOXBCY_fake_script() -- Execute.LocalScript
 		
 	end)
 end
-coroutine.wrap(AOXBCY_fake_script)()
-local function SJHZIVW_fake_script() -- RJ.LocalScript 
+coroutine.wrap(AVDV_fake_script)()
+local function ESMVKF_fake_script() -- RJ.LocalScript 
 	local script = Instance.new('LocalScript', RJ)
 
 	RJ.MouseButton1Click:Connect(function()
 		game:GetService("TeleportService"):Teleport(game.PlaceId, game:GetService("Players").LocalPlayer)
 	end)
 end
-coroutine.wrap(SJHZIVW_fake_script)()
-local function CEDZT_fake_script() -- RS.LocalScript 
+coroutine.wrap(ESMVKF_fake_script)()
+local function OBUVZQ_fake_script() -- RS.LocalScript 
 	local script = Instance.new('LocalScript', RS)
 
 	RS.MouseButton1Click:Connect(function()
@@ -358,8 +373,8 @@ local function CEDZT_fake_script() -- RS.LocalScript
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/pepfre12/exe/hax"))()
 	end)
 end
-coroutine.wrap(CEDZT_fake_script)()
-local function VGAB_fake_script() -- RE.LocalScript 
+coroutine.wrap(OBUVZQ_fake_script)()
+local function CXIDHR_fake_script() -- RE.LocalScript 
 	local script = Instance.new('LocalScript', RE)
 
 	RE.MouseButton1Click:Connect(function()
@@ -368,8 +383,17 @@ local function VGAB_fake_script() -- RE.LocalScript
 		
 	end)
 end
-coroutine.wrap(VGAB_fake_script)()
-local function XMPJ_fake_script() -- Executer.Dragify 
+coroutine.wrap(CXIDHR_fake_script)()
+local function HVQM_fake_script() -- RS_2.LocalScript 
+	local script = Instance.new('LocalScript', RS_2)
+
+	RS.MouseButton1Click:Connect(function()
+		HAXEXEV4:Destroy()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/pepfre12/exe/hax"))()
+	end)
+end
+coroutine.wrap(HVQM_fake_script)()
+local function UZMG_fake_script() -- Executer.Dragify 
 	local script = Instance.new('LocalScript', Executer)
 
 	local UIS = game:GetService("UserInputService")
@@ -410,4 +434,4 @@ local function XMPJ_fake_script() -- Executer.Dragify
 	
 	dragify(script.Parent)
 end
-coroutine.wrap(XMPJ_fake_script)()
+coroutine.wrap(UZMG_fake_script)()
