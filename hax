@@ -29,21 +29,24 @@ local RS = Instance.new("ImageButton")
 local SCRIPT = Instance.new("ImageButton")
 local RE = Instance.new("ImageButton")
 local RIG = Instance.new("ImageButton")
-local RS_2 = Instance.new("ImageButton")
+local X = Instance.new("ImageButton")
 local Buttons = Instance.new("Frame")
-local Title = Instance.new("TextButton")
+local Execute_2 = Instance.new("TextButton")
 local UICorner_5 = Instance.new("UICorner")
 local Holder = Instance.new("Frame")
 local Background_2 = Instance.new("Frame")
 local UICorner_6 = Instance.new("UICorner")
 local TextBox = Instance.new("TextBox")
+local shadowHolder = Instance.new("Frame")
+local umbraShadow = Instance.new("ImageLabel")
+local penumbraShadow = Instance.new("ImageLabel")
+local ambientShadow = Instance.new("ImageLabel")
 
 -- Properties
 
 HAXEXEV4.Name = "HAXEXEV4"
 HAXEXEV4.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 HAXEXEV4.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-HAXEXEV4.ResetOnSpawn = false
 
 Executer.Name = "Executer"
 Executer.Parent = HAXEXEV4
@@ -54,6 +57,7 @@ Executer.BorderColor3 = Color3.new(0, 0, 0)
 Executer.BorderSizePixel = 0
 Executer.Position = UDim2.new(0.5, 0, 0.5, 0)
 Executer.Size = UDim2.new(0, 450, 0, 325)
+Executer.ZIndex = 20
 
 Sidebar.Name = "Sidebar"
 Sidebar.Parent = Executer
@@ -114,7 +118,7 @@ Icon.BorderSizePixel = 0
 Icon.Position = UDim2.new(0, 8, 0.5, 0)
 Icon.Size = UDim2.new(0, 15, 0, 15)
 Icon.Image = "rbxassetid://9999783439"
-Icon.ImageTransparency = 0.11999999731779099
+Icon.ImageTransparency = 0.1599999964237213
 Icon.ScaleType = Enum.ScaleType.Fit
 
 Clear.Name = "Clear"
@@ -247,18 +251,18 @@ RIG.Image = "rbxassetid://11295273292"
 RIG.ImageColor3 = Color3.new(0.784314, 0.784314, 0.784314)
 RIG.ImageTransparency = 0.20000000298023224
 
-RS_2.Name = "RS"
-RS_2.Parent = Sidebar
-RS_2.AnchorPoint = Vector2.new(0, 1)
-RS_2.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
-RS_2.BackgroundTransparency = 1
-RS_2.BorderSizePixel = 0
-RS_2.Position = UDim2.new(0.56099999, 10, 1, -10)
-RS_2.Size = UDim2.new(0, 22, 0, 22)
-RS_2.ZIndex = 3
-RS_2.Image = "rbxassetid://10152135063"
-RS_2.ImageColor3 = Color3.new(0.784314, 0.784314, 0.784314)
-RS_2.ImageTransparency = 0.3199999928474426
+X.Name = "X"
+X.Parent = Sidebar
+X.AnchorPoint = Vector2.new(0, 1)
+X.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+X.BackgroundTransparency = 1
+X.BorderSizePixel = 0
+X.Position = UDim2.new(0.56099999, 10, 1, -10)
+X.Size = UDim2.new(0, 22, 0, 22)
+X.ZIndex = 3
+X.Image = "rbxassetid://10152135063"
+X.ImageColor3 = Color3.new(0.784314, 0.784314, 0.784314)
+X.ImageTransparency = 0.4000000059604645
 
 Buttons.Name = "Buttons"
 Buttons.Parent = Executer
@@ -269,24 +273,24 @@ Buttons.BorderSizePixel = 0
 Buttons.Position = UDim2.new(0, 10, 0, 5)
 Buttons.Size = UDim2.new(0.25, -20, 0, 25)
 
-Title.Name = "Title"
-Title.Parent = Buttons
-Title.Active = false
-Title.BackgroundColor3 = Color3.new(0, 0, 0)
-Title.BackgroundTransparency = 1
-Title.BorderColor3 = Color3.new(0, 0, 0)
-Title.BorderSizePixel = 0
-Title.Position = UDim2.new(0.227027029, 0, 0.0799999982, 0)
-Title.Size = UDim2.new(0.529729724, 0, 0, 28)
-Title.Font = Enum.Font.SourceSans
-Title.Text = "H A X . E X E"
-Title.TextColor3 = Color3.new(1, 1, 1)
-Title.TextSize = 20
-Title.TextStrokeColor3 = Color3.new(1, 1, 1)
-Title.TextStrokeTransparency = 0.8999999761581421
-Title.TextTransparency = 0.5
+Execute_2.Name = "Execute"
+Execute_2.Parent = Buttons
+Execute_2.Active = false
+Execute_2.BackgroundColor3 = Color3.new(0, 0, 0)
+Execute_2.BackgroundTransparency = 1
+Execute_2.BorderColor3 = Color3.new(0, 0, 0)
+Execute_2.BorderSizePixel = 0
+Execute_2.Position = UDim2.new(0.227027029, 0, 0.0799999982, 0)
+Execute_2.Size = UDim2.new(0.529729724, 0, 0, 28)
+Execute_2.Font = Enum.Font.SourceSans
+Execute_2.Text = "H A X . E X E"
+Execute_2.TextColor3 = Color3.new(1, 1, 1)
+Execute_2.TextSize = 20
+Execute_2.TextStrokeColor3 = Color3.new(1, 1, 1)
+Execute_2.TextStrokeTransparency = 0.8999999761581421
+Execute_2.TextTransparency = 0.5
 
-UICorner_5.Parent = Title
+UICorner_5.Parent = Execute_2
 UICorner_5.CornerRadius = UDim.new(0, 5)
 
 Holder.Name = "Holder"
@@ -316,8 +320,8 @@ TextBox.BackgroundColor3 = Color3.new(1, 1, 1)
 TextBox.BackgroundTransparency = 1
 TextBox.BorderColor3 = Color3.new(0, 0, 0)
 TextBox.BorderSizePixel = 0
-TextBox.Position = UDim2.new(0, 5, 0, 0)
-TextBox.Size = UDim2.new(0, 327, 0, 325)
+TextBox.Position = UDim2.new(0, 3, 0, 0)
+TextBox.Size = UDim2.new(0, 334, 0, 325)
 TextBox.ClearTextOnFocus = false
 TextBox.Font = Enum.Font.Code
 TextBox.Text = ""
@@ -328,73 +332,125 @@ TextBox.TextWrapped = true
 TextBox.TextXAlignment = Enum.TextXAlignment.Left
 TextBox.TextYAlignment = Enum.TextYAlignment.Top
 
+shadowHolder.Name = "shadowHolder"
+shadowHolder.Parent = Executer
+shadowHolder.AnchorPoint = Vector2.new(0.5, 0.5)
+shadowHolder.BackgroundTransparency = 1
+shadowHolder.Position = UDim2.new(0.5, 0, 0.5, 0)
+shadowHolder.Size = UDim2.new(1.04222214, 0, 1.04923081, 0)
+shadowHolder.ZIndex = 0
+
+umbraShadow.Name = "umbraShadow"
+umbraShadow.Parent = shadowHolder
+umbraShadow.AnchorPoint = Vector2.new(0.5, 0.5)
+umbraShadow.BackgroundTransparency = 1
+umbraShadow.Position = UDim2.new(0.5, 0, 0.5, 0)
+umbraShadow.Size = UDim2.new(1, 2, 1, 2)
+umbraShadow.ZIndex = 0
+umbraShadow.Image = "rbxassetid://1316045217"
+umbraShadow.ImageColor3 = Color3.new(0, 0, 0)
+umbraShadow.ImageTransparency = 0.8600000143051147
+umbraShadow.ScaleType = Enum.ScaleType.Slice
+umbraShadow.SliceCenter = Rect.new(10, 10, 118, 118)
+
+penumbraShadow.Name = "penumbraShadow"
+penumbraShadow.Parent = shadowHolder
+penumbraShadow.AnchorPoint = Vector2.new(0.5, 0.5)
+penumbraShadow.BackgroundTransparency = 1
+penumbraShadow.Position = UDim2.new(0.5, 0, 0.5, 0)
+penumbraShadow.Size = UDim2.new(1, 2, 1, 2)
+penumbraShadow.ZIndex = 0
+penumbraShadow.Image = "rbxassetid://1316045217"
+penumbraShadow.ImageColor3 = Color3.new(0, 0, 0)
+penumbraShadow.ImageTransparency = 0.8799999952316284
+penumbraShadow.ScaleType = Enum.ScaleType.Slice
+penumbraShadow.SliceCenter = Rect.new(10, 10, 118, 118)
+
+ambientShadow.Name = "ambientShadow"
+ambientShadow.Parent = shadowHolder
+ambientShadow.AnchorPoint = Vector2.new(0.5, 0.5)
+ambientShadow.BackgroundTransparency = 1
+ambientShadow.Position = UDim2.new(0.5, 0, 0.5, 0)
+ambientShadow.Size = UDim2.new(1, 2, 1, 2)
+ambientShadow.ZIndex = 0
+ambientShadow.Image = "rbxassetid://1316045217"
+ambientShadow.ImageColor3 = Color3.new(0, 0, 0)
+ambientShadow.ImageTransparency = 0.8399999737739563
+ambientShadow.ScaleType = Enum.ScaleType.Slice
+ambientShadow.SliceCenter = Rect.new(10, 10, 118, 118)
+
 -- Scripts
 
-local function PBXBJ_fake_script() -- Inject.LocalScript 
+local function IVKH_fake_script() -- Inject.LocalScript 
 	local script = Instance.new('LocalScript', Inject)
 
 	Inject.MouseButton1Click:Connect(function()
-		
-		--Inject stuff here
+		local codeToInject = TextBox.Text
+		print("Injecting code:", codeToInject)
+
 		
 	end)
 end
-coroutine.wrap(PBXBJ_fake_script)()
-local function LGDG_fake_script() -- Clear.LocalScript 
+coroutine.wrap(IVKH_fake_script)()
+local function HJAE_fake_script() -- Clear.LocalScript 
 	local script = Instance.new('LocalScript', Clear)
 
 	Clear.MouseButton1Click:Connect(function()
 		TextBox.Text = ""
 	end)
 end
-coroutine.wrap(LGDG_fake_script)()
-local function AVDV_fake_script() -- Execute.LocalScript 
+coroutine.wrap(HJAE_fake_script)()
+local function LKZETTM_fake_script() -- Execute.LocalScript 
 	local script = Instance.new('LocalScript', Execute)
 
 	Execute.MouseButton1Click:Connect(function()
-		--Execute stuff here
-		
+		local codeToExecute = TextBox.Text
+		local success, errorMsg = pcall(loadstring(codeToExecute))
+		if not success then
+			print("Error executing code:", errorMsg)
+		end
 	end)
 end
-coroutine.wrap(AVDV_fake_script)()
-local function ESMVKF_fake_script() -- RJ.LocalScript 
+coroutine.wrap(LKZETTM_fake_script)()
+local function CFLDHYL_fake_script() -- RJ.LocalScript 
 	local script = Instance.new('LocalScript', RJ)
 
 	RJ.MouseButton1Click:Connect(function()
 		game:GetService("TeleportService"):Teleport(game.PlaceId, game:GetService("Players").LocalPlayer)
 	end)
 end
-coroutine.wrap(ESMVKF_fake_script)()
-local function OBUVZQ_fake_script() -- RS.LocalScript 
+coroutine.wrap(CFLDHYL_fake_script)()
+local function TYTK_fake_script() -- RS.LocalScript 
 	local script = Instance.new('LocalScript', RS)
 
 	RS.MouseButton1Click:Connect(function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/pepfre12/exe/hax"))()
-		HAXEXEV4:Destroy()
 		
+		wait(0.1)
+		
+		HAXEXEV4:Destroy()
+	
 	end)
 end
-coroutine.wrap(OBUVZQ_fake_script)()
-local function CXIDHR_fake_script() -- RE.LocalScript 
+coroutine.wrap(TYTK_fake_script)()
+local function SDESXS_fake_script() -- RE.LocalScript 
 	local script = Instance.new('LocalScript', RE)
 
 	RE.MouseButton1Click:Connect(function()
-		
-		game.Players.LocalPlayer.Character.Humanoid:TakeDamage(100000)
-		
+		game.Players.LocalPlayer.Character.Humanoid.Health = 0
 	end)
 end
-coroutine.wrap(CXIDHR_fake_script)()
-local function HVQM_fake_script() -- RS_2.LocalScript 
-	local script = Instance.new('LocalScript', RS_2)
+coroutine.wrap(SDESXS_fake_script)()
+local function JKSKHAD_fake_script() -- X.LocalScript 
+	local script = Instance.new('LocalScript', X)
 
-	RS.MouseButton1Click:Connect(function()
+	X.MouseButton1Click:Connect(function()
 		HAXEXEV4:Destroy()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/pepfre12/exe/hax"))()
+	
 	end)
 end
-coroutine.wrap(HVQM_fake_script)()
-local function UZMG_fake_script() -- Executer.Dragify 
+coroutine.wrap(JKSKHAD_fake_script)()
+local function KYZP_fake_script() -- Executer.Dragify 
 	local script = Instance.new('LocalScript', Executer)
 
 	local UIS = game:GetService("UserInputService")
@@ -435,4 +491,4 @@ local function UZMG_fake_script() -- Executer.Dragify
 	
 	dragify(script.Parent)
 end
-coroutine.wrap(UZMG_fake_script)()
+coroutine.wrap(KYZP_fake_script)()
